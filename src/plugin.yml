@@ -1,0 +1,7 @@
+name: Corrector
+main: net.coreprotect.Corrector
+version: 1.0.0
+website: http://coreprotect.net
+author: Intelli
+description: >
+             Quick typo correction.
