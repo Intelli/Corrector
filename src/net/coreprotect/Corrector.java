@@ -5,7 +5,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Corrector extends JavaPlugin {
     private static Corrector instance;
 
-    public static Corrector getInstance() {
+    protected static Corrector getInstance() {
         return instance;
     }
 
