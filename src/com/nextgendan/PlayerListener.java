@@ -1,4 +1,4 @@
-package net.coreprotect;
+package com.nextgendan;
 
 import java.util.concurrent.ConcurrentHashMap;
 

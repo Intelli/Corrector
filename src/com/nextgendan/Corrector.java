@@ -1,4 +1,4 @@
-package net.coreprotect;
+package com.nextgendan;
 
 import org.bukkit.plugin.java.JavaPlugin;
 

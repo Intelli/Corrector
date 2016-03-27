@@ -1,7 +1,7 @@
 name: Corrector
-main: net.coreprotect.Corrector
+main: com.nextgendan.Corrector
 version: 1.1.0
-website: http://coreprotect.net
+website: http://nextgendan.com
 author: Intelli
 description: >
              Quick typo correction.
