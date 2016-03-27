@@ -1,8 +1,6 @@
 package net.coreprotect;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -12,10 +10,10 @@ import org.bukkit.event.player.AsyncPlayerChatEvent;
 
 public class PlayerListener implements Listener {
 
-    public static Map<String, String> messages = Collections.synchronizedMap(new HashMap<String, String>());
+    public static ConcurrentHashMap<String, String> messages = new ConcurrentHashMap<String, String>();
 
     @EventHandler(priority = EventPriority.MONITOR)
-    public void onPlayerChat (AsyncPlayerChatEvent event){
+    public void onPlayerChat(AsyncPlayerChatEvent event) {
         String message = event.getMessage();
         if (message.startsWith("/")) {
             return;
@@ -42,7 +40,6 @@ public class PlayerListener implements Listener {
                             }
                         }
                     }, 1);
-
                 }
 
                 return;
