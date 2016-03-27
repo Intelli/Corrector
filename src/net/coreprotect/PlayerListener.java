@@ -29,17 +29,19 @@ public class PlayerListener implements Listener {
                 if (messages.get(uuid) != null) {
                     final Player player = event.getPlayer();
                     final String newMessage = messages.get(uuid).replace(oldString, "§o" + newString + "§r");
-                    Corrector.getInstance().getServer().getScheduler().scheduleSyncDelayedTask(Corrector.getInstance(), new Runnable() {
-                        @Override
-                        public void run() {
-                            try {
-                                player.chat(newMessage);
+                    if (newMessage.length() <= 150) {
+                        Corrector.getInstance().getServer().getScheduler().scheduleSyncDelayedTask(Corrector.getInstance(), new Runnable() {
+                            @Override
+                            public void run() {
+                                try {
+                                    player.chat(newMessage);
+                                }
+                                catch (Exception e) {
+                                    e.printStackTrace();
+                                }
                             }
-                            catch (Exception e) {
-                                e.printStackTrace();
-                            }
-                        }
-                    }, 1);
+                        }, 1);
+                    }
                 }
 
                 return;
