@@ -41,7 +41,7 @@ public class PlayerListener implements Listener {
                                 e.printStackTrace();
                             }
                         }
-                    }, 0);
+                    }, 1);
 
                 }
 
