@@ -28,7 +28,7 @@ public class PlayerListener implements Listener {
 
                 if (messages.get(uuid) != null) {
                     final Player player = event.getPlayer();
-                    final String newMessage = messages.get(uuid).replace(oldString, "§o" + newString + "§r");
+                    final String newMessage = messages.get(uuid).replace(oldString, "\u00A76o" + newString + "\u00A76r");
                     if (newMessage.length() <= 150) {
                         Corrector.getInstance().getServer().getScheduler().scheduleSyncDelayedTask(Corrector.getInstance(), new Runnable() {
                             @Override
